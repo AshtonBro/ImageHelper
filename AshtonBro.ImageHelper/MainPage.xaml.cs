@@ -19,6 +19,9 @@ using System.Threading.Tasks;
 using Windows.Storage.Pickers;
 using Windows.Storage;
 using Windows.Graphics.Imaging;
+using Windows.ApplicationModel.DataTransfer;
+using Windows.ApplicationModel.DataTransfer.ShareTarget;
+using Windows.ApplicationModel.Activation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -30,6 +33,10 @@ namespace AshtonBro.ImageHelper
     public sealed partial class MainPage : Page
     {
         private WriteableBitmap _writeableBitmap;
+        private ShareOperation _shareOperation;
+        private RandomAccessStreamReference _bitmap;
+        private IReadOnlyList<IStorageItem> _items;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -85,6 +92,33 @@ namespace AshtonBro.ImageHelper
             }
         }
 
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var args = e.Parameter as ShareTargetActivatedEventArgs;
+
+            if (args != null)
+            {
+                _shareOperation = args.ShareOperation;
+
+                if (_shareOperation.Data.Contains(StandardDataFormats.Bitmap))
+                {
+                    _bitmap = await _shareOperation.Data.GetBitmapAsync();
+
+                    await ProcessBitmap();
+                }
+                else if (_shareOperation.Data.Contains(StandardDataFormats.StorageItems))
+                {
+                    _items = await _shareOperation.Data.GetStorageItemsAsync();
+
+                    await ProcessStorageItems();
+                }
+                else
+                {
+                    _shareOperation.ReportError("Image Helper was unable to find a valid bitmap.");
+                }
+            }
+        }
+
         private async Task LoadBitmap(IRandomAccessStream stream)
         {
             _writeableBitmap = new WriteableBitmap(1, 1);
@@ -94,6 +128,31 @@ namespace AshtonBro.ImageHelper
             await Dispatcher.RunAsync(
                 Windows.UI.Core.CoreDispatcherPriority.Normal,
                 () => ImageTarget.Source = _writeableBitmap);
+        }
+
+        private async Task ProcessBitmap()
+        {
+            if (_bitmap != null)
+            {
+                await LoadBitmap(await _bitmap.OpenReadAsync());
+            } 
+        }
+
+        private async Task ProcessStorageItems()
+        {
+            foreach (var item in _items)
+            {
+                if (item.IsOfType(StorageItemTypes.File))
+                {
+                    var file = item as StorageFile;
+
+                    if (file.ContentType.StartsWith("image", StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        await LoadBitmap(await file.OpenReadAsync());
+                        break;
+                    }
+                }
+            }
         }
     }
 }
