@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="61f90a57-417b-4ebf-8985-89b82adf3138"
+    Name="e65a5a68-1c0c-4270-8468-d0a28f811097"
     Publisher="CN=Evgenii Solovev"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="61f90a57-417b-4ebf-8985-89b82adf3138" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="e65a5a68-1c0c-4270-8468-d0a28f811097" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>AshtonBro.Storyboard</DisplayName>
+    <DisplayName>AshtonBro.StoryboardExamp</DisplayName>
     <PublisherDisplayName>Evgenii Solovev</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="AshtonBro.Storyboard.App">
+      EntryPoint="AshtonBro.StoryboardExamp.App">
       <uap:VisualElements
-        DisplayName="AshtonBro.Storyboard"
+        DisplayName="AshtonBro.StoryboardExamp"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="AshtonBro.Storyboard"
+        Description="AshtonBro.StoryboardExamp"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
