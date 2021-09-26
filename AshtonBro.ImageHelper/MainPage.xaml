@@ -14,7 +14,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Image x:Name="ImageTarget" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform"/>
-        <StackPanel Grid.Row="1" Margin="10" HorizontalAlignment="Center" Orientation="Horizontal" >
+        <StackPanel Grid.Row="1" Margin="10" Background="Transparent" HorizontalAlignment="Center" Orientation="Horizontal" >
             <Button x:Name="CaptureButton" Content="Capture New Image" Click="CaptureButton_Click"/>
             <Button x:Name="SaveButton" Content="Save Image" Click="SaveButton_Click" Margin="20 0 0 0"/>
         </StackPanel>

@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="f71d1f50-6c04-4778-978d-44966eb22bd8"
+    Name="778d7aae-8a7a-4380-92b5-a569ac6b6ac2"
     Publisher="CN=Evgenii Solovev"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="f71d1f50-6c04-4778-978d-44966eb22bd8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="778d7aae-8a7a-4380-92b5-a569ac6b6ac2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>AshtonBro.ImageHelper</DisplayName>
+    <DisplayName>AshtonBro.DependencyProperties</DisplayName>
     <PublisherDisplayName>Evgenii Solovev</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,32 +30,20 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="AshtonBro.ImageHelper.App">
+      EntryPoint="AshtonBro.DependencyProperties.App">
       <uap:VisualElements
-        DisplayName="AshtonBro.ImageHelper"
+        DisplayName="AshtonBro.DependencyProperties"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="AshtonBro.ImageHelper"
+        Description="AshtonBro.DependencyProperties"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
-      <Extensions>
-        <uap:Extension Category="windows.shareTarget">
-          <uap:ShareTarget>
-            <uap:SupportedFileTypes>
-              <uap:SupportsAnyFileType/>
-            </uap:SupportedFileTypes>
-            <uap:DataFormat>Bitmap</uap:DataFormat>
-          </uap:ShareTarget>
-        </uap:Extension>
-      </Extensions>
     </Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
-    <uap:Capability Name="picturesLibrary"/>
-    <DeviceCapability Name="webcam"/>
   </Capabilities>
 </Package>
