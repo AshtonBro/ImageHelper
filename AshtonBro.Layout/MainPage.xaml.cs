@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using AshtonBro.Layout.Examples;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -53,6 +54,16 @@ namespace AshtonBro.Layout
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.  The Parameter
+        /// property is typically used to configure the page.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            FlipExamples.ItemsSource = Examples;
         }
     }
 }
