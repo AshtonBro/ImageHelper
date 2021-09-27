@@ -35,6 +35,8 @@ namespace AshtonBro.StoryboardExamp
             }
 
             var firstOne = (Storyboard)MainGrid.Resources["FirstOneAnimation"];
+
+            var secondOne = (Storyboard)MainGrid.Resources["SecondOneAnimation"];
         }
     }
 }
