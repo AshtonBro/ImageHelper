@@ -8,5 +8,7 @@ __DependencyProperties__ - This system expands the capabilities of traditional p
 
 __StoryboardExamp__ - The app illustrates different uses of the timeline, animation and some styles. <br>
 
+__Layout__ - A Windows application should have a flexible and reactive layout that works well on any screen form factor. In part, this concerns portrait and landscape screen orientations, various sizes, as well as the lock mode. XAML provides many UI-elements designed to make it easier to build layouts for your application. <br>
+
 * Download files and read project description 📖👉 [Project Materials](https://archive.codeplex.com/?p=windows8applications)
 * See other Jeremy works and the git-hub in general 👴👉 [GitHub - JeremyLikness](https://github.com/JeremyLikness/BuildWin8Apps)
