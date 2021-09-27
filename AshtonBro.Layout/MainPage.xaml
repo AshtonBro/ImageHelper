@@ -16,7 +16,7 @@
         <TextBlock Text="Layout Examples" Style="{StaticResource HeaderTextBlockStyle}" Margin="10"/>
         <TextBlock Text="The following examples demonstrate the use of different layout options. The main control for this application is a FlipView and the template to generate the title and example layouts is a ContentControl." 
                    TextWrapping="Wrap" Grid.Row="1" Margin="10" Style="{StaticResource BodyTextBlockStyle}"/>
-        <FlipView x:Name="FlipExamples" Grid.Row="2" ItemTemplate="{StaticResource TreeViewItemDataTemplate}"/>
+        <FlipView x:Name="FlipExamples" Grid.Row="2" ItemTemplate="{StaticResource ListPickerFlyoutPresenterContentTemplate}"/>
         <!--ExampleTemplate-->
     </Grid>
 </Page>
