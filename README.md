@@ -1,6 +1,6 @@
 ## Building Windows 8 Apps with C# and XAML 👨‍🎓 📚
 
-### The tutorial is designed to show you how to write Windows applications using C # and HAML.
+### The tutorial shows you how to write Windows applications using C # and XAML.
 
 __ImageHelper__ - The application, you can take a picture using a webcam connected to your computer, but also save it. You can also get a picture from another user and watch it. <br>
 
