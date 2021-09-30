@@ -12,5 +12,8 @@ __Layout__ - A Windows application should have a flexible and reactive layout th
 ______
 __Panels__ - The app shows many examples of layouts for managing object lists. Such as: GridView, ListView, FlipView, ListBox. <br>
 ______
+__Touch__ - Windows makes it easy to work with events from different devices by providing a set of hardware-independent pointing events. Pointing events occur when a touchscreen, stylus, mouse, or keyboard is used to interact with an application. How it works can be seen in the Touch application.
+______
+
 * Download files and read project description 📖👉 [Project Materials](https://archive.codeplex.com/?p=windows8applications)
 * See other Jeremy works 👴👉 [GitHub - Jeremy Likness](https://github.com/JeremyLikness/BuildWin8Apps)
