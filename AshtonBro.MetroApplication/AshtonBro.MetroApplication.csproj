@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{10076317-E2A5-49EF-B687-C7858F8C3473}</ProjectGuid>
+    <ProjectGuid>{1A286437-B279-4171-B2A0-599E0D3843EA}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AshtonBro.Compression</RootNamespace>
-    <AssemblyName>AshtonBro.Compression</AssemblyName>
+    <RootNamespace>AshtonBro.MetroApplication</RootNamespace>
+    <AssemblyName>AshtonBro.MetroApplication</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -130,14 +132,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\DarkGray.png" />
+    <Content Include="Assets\LightGray.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\MediumGray.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -154,6 +156,7 @@
       <Version>6.2.12</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
