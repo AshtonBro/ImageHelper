@@ -76,7 +76,9 @@ namespace AshtonBro.MetroApplication
             var splashScreen = args.SplashScreen;
 
             var eSplash = new ExtendedSplashScreen(splashScreen, false, args);
+
             splashScreen.Dismissed += eSplash.DismissedEventHandler;
+
             Window.Current.Content = eSplash;
             Window.Current.Activate();
         }
