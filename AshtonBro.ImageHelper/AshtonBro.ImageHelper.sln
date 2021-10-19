@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshtonBro.Compression", "..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshtonBro.Wintellog", "..\AshtonBro.Wintellog\AshtonBro.Wintellog.csproj", "{7D58047D-614B-40ED-A2E3-851B7D01E511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshtonBro.EncryptionSigning", "..\AshtonBro.EncryptionSigning\AshtonBro.EncryptionSigning.csproj", "{422768D8-D471-448D-AC64-B19D6B3E8743}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -223,6 +225,30 @@ Global
 		{7D58047D-614B-40ED-A2E3-851B7D01E511}.Release|x86.ActiveCfg = Release|x86
 		{7D58047D-614B-40ED-A2E3-851B7D01E511}.Release|x86.Build.0 = Release|x86
 		{7D58047D-614B-40ED-A2E3-851B7D01E511}.Release|x86.Deploy.0 = Release|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM.ActiveCfg = Debug|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM.Build.0 = Debug|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM.Deploy.0 = Debug|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM64.Build.0 = Debug|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x64.ActiveCfg = Debug|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x64.Build.0 = Debug|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x64.Deploy.0 = Debug|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x86.ActiveCfg = Debug|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x86.Build.0 = Debug|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Debug|x86.Deploy.0 = Debug|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM.ActiveCfg = Release|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM.Build.0 = Release|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM.Deploy.0 = Release|ARM
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM64.ActiveCfg = Release|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM64.Build.0 = Release|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|ARM64.Deploy.0 = Release|ARM64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x64.ActiveCfg = Release|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x64.Build.0 = Release|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x64.Deploy.0 = Release|x64
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x86.ActiveCfg = Release|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x86.Build.0 = Release|x86
+		{422768D8-D471-448D-AC64-B19D6B3E8743}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

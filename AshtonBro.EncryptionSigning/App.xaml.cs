@@ -1,10 +1,10 @@
-﻿using AshtonBro.Wintellog.Common;
-using AshtonBro.Wintellog.DataModel;
+﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
-namespace AshtonBro.Wintellog
+namespace AshtonBro.EncryptionSigning
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -12,21 +12,14 @@ namespace AshtonBro.Wintellog
     sealed partial class App : Application
     {
         /// <summary>
-        /// Initializes the singleton Application object.  This is the first line of authored code
+        /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
-            InitializeComponent();
-            Suspending += OnSuspending;
+            this.InitializeComponent();
+            this.Suspending += OnSuspending;
         }
-
-        public static App Instance
-        {
-            get { return ((App)Current); }
-        }
-
-        public BlogDataSource DataSource { get; private set; }
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -44,12 +37,20 @@ namespace AshtonBro.Wintellog
                 return;
             }
 
-            DataSource = new BlogDataSource();
+            if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            {
+                //TODO: Load state from previously suspended application
+            }
 
-            var splashScreen = args.SplashScreen;
-            var splash = new SplashPage(splashScreen, args);
-            splashScreen.Dismissed += splash.DismissedEventHandler;
-            Window.Current.Content = splash;
+            // Create a Frame to act navigation context and navigate to the first page
+            var rootFrame = new Frame();
+            if (!rootFrame.Navigate(typeof(MainPage)))
+            {
+                throw new Exception("Failed to create initial page");
+            }
+
+            // Place the frame in the current Window and ensure that it is active
+            Window.Current.Content = rootFrame;
             Window.Current.Activate();
         }
 
@@ -60,10 +61,10 @@ namespace AshtonBro.Wintellog
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private async void OnSuspending(object sender, SuspendingEventArgs e)
+        private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            await SuspensionManager.SaveAsync();
+            //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
     }
