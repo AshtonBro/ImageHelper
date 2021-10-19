@@ -14,6 +14,8 @@ __Panels__ - The app shows many examples of layouts for managing object lists. S
 ______
 __Touch__ - Windows makes it easy to work with events from different devices by providing a set of hardware-independent pointing events. Pointing events occur when a touchscreen, stylus, mouse, or keyboard is used to interact with an application. How it works can be seen in the Touch application.
 ______
+__EncryptionSigning__ - The CryptograthicEngine class supports data encryption and digital signature generation. This class provides the means for encrypting, decrypting, creating even signatures, and verifying them. In the EncryptionSigning project, there are some simple examples of these operations.
+______
 
 * Download files and read project description 📖👉 [Project Materials](https://archive.codeplex.com/?p=windows8applications)
 * See other Jeremy works 👴👉 [GitHub - Jeremy Likness](https://github.com/JeremyLikness/BuildWin8Apps)
