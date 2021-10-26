@@ -18,6 +18,8 @@
 
             <!-- Application-specific resources -->
 
+            
+            
             <x:String x:Key="AppName">Wintellog</x:String>
         </ResourceDictionary>
     </Application.Resources>
