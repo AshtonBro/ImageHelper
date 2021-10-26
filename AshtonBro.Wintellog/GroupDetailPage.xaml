@@ -26,6 +26,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
+    
     <Grid
         Style="{StaticResource LayoutRootStyle}"
         DataContext="{Binding Group}"
@@ -37,6 +38,7 @@
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -73,7 +75,9 @@
                             <BitmapImage UriSource="{Binding Items[0].DefaultImageUri}"/>
                         </Image.Source>
                     </Image>
+                    
                     <!--<TextBlock Text="{Binding Description}" Margin="0,0,18,0" Style="{StaticResource BodyTextStyle}"/>-->
+               
                 </StackPanel>
                 <GridView
                     AutomationProperties.AutomationId="ItemGridView"
