@@ -95,6 +95,7 @@
         </ScrollViewer>
 
         <!-- Vertical scrolling list only used when snapped -->
+        
         <ScrollViewer
             x:Name="itemListScrollViewer"
             AutomationProperties.AutomationId="ItemListScrollViewer"
@@ -155,6 +156,7 @@
                     The back button and title have different styles when snapped, and the list representation is substituted
                     for the grid displayed in all other view states
                 -->
+                
                 <VisualState x:Name="Snapped">
                     <Storyboard>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
